@@ -1,0 +1,1 @@
+# hackintosh-vostro-5471
