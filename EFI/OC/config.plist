@@ -143,6 +143,20 @@
 				<data>AAAwAQ==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
+				<!-- Com framebuffer patch ativo, forca tipo HDMI para evitar tons roxos/lavados -->
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
+				<!-- HDMI com pixel clock mais alto para monitores externos >60Hz -->
+				<key>enable-max-pixel-clock-override</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 			</dict>
 			<!-- Audio - ALC295 (HDEF em Pci(0x1f,0x3)) -->
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
@@ -779,9 +793,9 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
-				<!-- boot-args para Kaby Lake-R + desativacao da Radeon dGPU -->
+				<!-- boot-args para Kaby Lake-R + dGPU off + ajustes HDMI -->
 				<key>boot-args</key>
-				<string>-v -wegnoegpu alcid=11</string>
+				<string>-wegnoegpu alcid=11 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1</string>
 				<key>csr-active-config</key>
 				<!-- SIP enabled -->
 				<data>AAAAAA==</data>
