@@ -24,7 +24,7 @@
 | Ethernet    | Realtek RTL8111/8168/8411    |
 | Wi-Fi       | Intel (AirportItlwm / itlwm) |
 | Bluetooth   | Intel                        |
-| Audio       | Realtek (layout-id 21)       |
+| Audio       | Realtek ALC295 (layout-id 21)|
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
@@ -125,7 +125,7 @@ Antes do primeiro boot:
 
 2. Faça **Reset NVRAM** pelo OpenCore
 
-   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU e de input.
+   > Obrigatório após atualizar/trocar a EFI para aplicar corretamente os ajustes de energia da CPU e de input.
 
 3. Wi-Fi não funcionando?
 
