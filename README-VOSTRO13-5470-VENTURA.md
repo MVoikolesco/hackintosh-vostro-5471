@@ -14,10 +14,11 @@ Esta pasta foi preparada para:
 ## Ajustes aplicados
 - SMBIOS para MacBookPro15,2
 - iGPU ajustada para UHD 620 (ig-platform-id 0x59160000)
-- boot-args: `-wegnoegpu alcid=21`
+- boot-args: `-wegnoegpu alcid=11`
 - Radeon dGPU desativada via boot-arg (WhateverGreen)
 - SecureBootModel em Default
 - Power Management de CPU reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
+- Ajuste adicional de backlight (`AAPL00,backlight-control=1`) para melhorar controle de brilho
 - AirportItlwm limitado ao kernel do Ventura (22.x)
 - Kexts essenciais habilitadas:
   - Lilu
@@ -47,7 +48,7 @@ Esta pasta foi preparada para:
    - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU e do input.
 
 ## Observações
-- Layout padrão atual de áudio: `21` (prioriza speakers internos).
+- Layout padrão atual de áudio: `11` (ALC295).
 - O codec de áudio pode variar. Se não houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
 - USBInjectAll está temporário. O ideal é mapear USB depois que o sistema estiver estável.
 - Trackpad ajustado para stack PS2 estável (`VoodooPS2Trackpad` + `VoodooInput` do PS2).
