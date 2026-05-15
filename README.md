@@ -56,7 +56,7 @@ EFI_Vostro13_5471_Ventura/
   ```
 * dGPU desativada (WhateverGreen)
 * SecureBootModel: Default
-* Power Management (CPU) ativo com quirks `AppleCpuPmCfgLock`, `AppleXcpmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
+* Power Management (CPU) reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
 * AirportItlwm compatível com Ventura (22.x)
 
 ---
