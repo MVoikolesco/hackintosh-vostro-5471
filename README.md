@@ -28,7 +28,7 @@
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
-| Input       | ELAN I2C (trackpad) + PS/2 (teclado) |
+| Input       | PS/2 (Synaptics / ELAN) |
 
 ---
 
@@ -69,9 +69,7 @@ EFI_Vostro13_5471_Ventura/
 * SMCBatteryManager
 * WhateverGreen
 * AppleALC
-* VoodooPS2Controller (teclado)
-* VoodooI2C (+ VoodooGPIO, VoodooI2CServices, VoodooInput)
-* VoodooI2CELAN
+* VoodooPS2Controller (+ plugins)
 * RealtekRTL8111
 * IntelBluetoothFirmware
 * IntelBTPatcher
@@ -127,7 +125,7 @@ Antes do primeiro boot:
 
 2. Faça **Reset NVRAM** pelo OpenCore
 
-   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU e de trackpad I2C.
+   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU e de input.
 
 3. Wi-Fi não funcionando?
 
@@ -149,11 +147,10 @@ Antes do primeiro boot:
 
 ---
 
-## 👆 Trackpad ELAN (I2C)
+## 👆 Trackpad
 
-* Stack I2C ativada: `VoodooI2C` + `VoodooGPIO` + `VoodooI2CServices` + `VoodooInput` + `VoodooI2CELAN`
-* Plugins `VoodooPS2Mouse` e `VoodooPS2Trackpad` desativados para evitar conflito com I2C
-* `VoodooPS2Controller` mantido para teclado PS/2
+* Trackpad ajustado para stack PS/2 estável (`VoodooPS2Trackpad` + `VoodooInput` do PS2)
+* Stack I2C (`VoodooI2C`/`VoodooI2CELAN`) desativada temporariamente para evitar perda total do cursor
 * SSDTs atuais (`SSDT-EC`, `SSDT-PLUG`, `SSDT-PNLF`, `SSDT-SBUS-MCHC`, `SSDT-AWAC-DISABLE`) mantidos ativos
 
 ---
