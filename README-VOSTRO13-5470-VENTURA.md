@@ -17,7 +17,7 @@ Esta pasta foi preparada para:
 - boot-args: `-wegnoegpu alcid=11`
 - Radeon dGPU desativada via boot-arg (WhateverGreen)
 - SecureBootModel em Default
-- Power Management de CPU reforcado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
+- Power Management de CPU reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
 - AirportItlwm limitado ao kernel do Ventura (22.x)
 - Kexts essenciais habilitadas:
   - Lilu
@@ -43,13 +43,13 @@ Esta pasta foi preparada para:
 - Fast Boot: Disabled
 
 ## Muito importante antes de usar
-1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta maquina.
-2. Se o Wi-Fi nao subir no Ventura, substituir AirportItlwm.kext por build compativel com Ventura (ou usar itlwm + HeliPort).
+1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta máquina.
+2. Se o Wi-Fi não subir no Ventura, substituir AirportItlwm.kext por build compatível com Ventura (ou usar itlwm + HeliPort).
 3. Fazer Reset NVRAM no primeiro boot pelo OpenCore.
    - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU e do trackpad I2C.
 
-## Observacoes
-- O codec de audio pode variar. Se nao houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
-- USBInjectAll esta temporario. O ideal e mapear USB depois que o sistema estiver estavel.
+## Observações
+- O codec de áudio pode variar. Se não houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
+- USBInjectAll está temporário. O ideal é mapear USB depois que o sistema estiver estável.
 - Stack de trackpad foi ajustada para ELAN I2C, com plugins PS2 de mouse/trackpad desativados para evitar conflito.
 - SSDTs atuais (EC/PLUG/PNLF/SBUS-MCHC/AWAC-DISABLE) foram revisados e mantidos ativos.
