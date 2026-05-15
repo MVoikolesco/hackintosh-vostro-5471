@@ -26,7 +26,9 @@ Esta pasta foi preparada para:
   - SMCBatteryManager
   - WhateverGreen
   - AppleALC
-  - VoodooPS2Controller + plugins
+  - VoodooPS2Controller (teclado)
+  - VoodooI2C + VoodooGPIO + VoodooI2CServices + VoodooInput
+  - VoodooI2CELAN
   - RealtekRTL8111
   - IntelBluetoothFirmware
   - IntelBTPatcher
@@ -44,8 +46,10 @@ Esta pasta foi preparada para:
 1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta maquina.
 2. Se o Wi-Fi nao subir no Ventura, substituir AirportItlwm.kext por build compativel com Ventura (ou usar itlwm + HeliPort).
 3. Fazer Reset NVRAM no primeiro boot pelo OpenCore.
-   - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU.
+   - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU e do trackpad I2C.
 
 ## Observacoes
 - O codec de audio pode variar. Se nao houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
 - USBInjectAll esta temporario. O ideal e mapear USB depois que o sistema estiver estavel.
+- Stack de trackpad foi ajustada para ELAN I2C, com plugins PS2 de mouse/trackpad desativados para evitar conflito.
+- SSDTs atuais (EC/PLUG/PNLF/SBUS-MCHC/AWAC-DISABLE) foram revisados e mantidos ativos.

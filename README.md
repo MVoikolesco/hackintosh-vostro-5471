@@ -28,7 +28,7 @@
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
-| Input       | PS/2 (Synaptics / ELAN)      |
+| Input       | ELAN I2C (trackpad) + PS/2 (teclado) |
 
 ---
 
@@ -69,7 +69,9 @@ EFI_Vostro13_5471_Ventura/
 * SMCBatteryManager
 * WhateverGreen
 * AppleALC
-* VoodooPS2Controller (+ plugins)
+* VoodooPS2Controller (teclado)
+* VoodooI2C (+ VoodooGPIO, VoodooI2CServices, VoodooInput)
+* VoodooI2CELAN
 * RealtekRTL8111
 * IntelBluetoothFirmware
 * IntelBTPatcher
@@ -125,7 +127,7 @@ Antes do primeiro boot:
 
 2. Faça **Reset NVRAM** pelo OpenCore
 
-   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU.
+   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU e de trackpad I2C.
 
 3. Wi-Fi não funcionando?
 
@@ -147,9 +149,12 @@ Antes do primeiro boot:
 
 ---
 
-## 👆 Trackpads ELAN
+## 👆 Trackpad ELAN (I2C)
 
-Caso necessário, utilize EFI alternativa compatível com ELAN
+* Stack I2C ativada: `VoodooI2C` + `VoodooGPIO` + `VoodooI2CServices` + `VoodooInput` + `VoodooI2CELAN`
+* Plugins `VoodooPS2Mouse` e `VoodooPS2Trackpad` desativados para evitar conflito com I2C
+* `VoodooPS2Controller` mantido para teclado PS/2
+* SSDTs atuais (`SSDT-EC`, `SSDT-PLUG`, `SSDT-PNLF`, `SSDT-SBUS-MCHC`, `SSDT-AWAC-DISABLE`) mantidos ativos
 
 ---
 
