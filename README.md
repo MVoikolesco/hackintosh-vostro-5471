@@ -150,6 +150,7 @@ Antes do primeiro boot:
 ## 👆 Trackpad
 
 * Trackpad ajustado para stack PS/2 estável (`VoodooPS2Trackpad` + `VoodooInput` do PS2)
+* `VoodooPS2Mouse` desativado para priorizar a identificação de trackpad nas Preferências do Sistema
 * Stack I2C (`VoodooI2C`/`VoodooI2CELAN`) desativada temporariamente para evitar perda total do cursor
 * SSDTs atuais (`SSDT-EC`, `SSDT-PLUG`, `SSDT-PNLF`, `SSDT-SBUS-MCHC`, `SSDT-AWAC-DISABLE`) mantidos ativos
 

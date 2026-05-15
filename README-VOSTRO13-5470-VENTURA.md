@@ -50,5 +50,6 @@ Esta pasta foi preparada para:
 - O codec de áudio pode variar. Se não houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
 - USBInjectAll está temporário. O ideal é mapear USB depois que o sistema estiver estável.
 - Trackpad ajustado para stack PS2 estável (`VoodooPS2Trackpad` + `VoodooInput` do PS2).
+- `VoodooPS2Mouse` desativado para priorizar a identificação de trackpad nas Preferências do Sistema.
 - Stack I2C (`VoodooI2C`/`VoodooI2CELAN`) desativada temporariamente para evitar perda de resposta.
 - SSDTs atuais (EC/PLUG/PNLF/SBUS-MCHC/AWAC-DISABLE) foram revisados e mantidos ativos.
