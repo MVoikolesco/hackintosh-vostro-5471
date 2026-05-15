@@ -16,7 +16,7 @@ Referência: `EFI/OC/config.plist` da branch `sequoia-migration`.
 | iGPU | UHD620 (`AAPL,ig-platform-id=0x59160000`) com patches de framebuffer/HDMI |
 | Boot args | `-wegnoegpu alcid=21 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1` |
 | Áudio | ALC295 layout-id `21` + `alcid=21` |
-| Wi‑Fi | `AirportItlwm.kext` ativo com janela Darwin `22.0.0` a `22.99.99` (estado anterior) |
+| Wi‑Fi | `AirportItlwm.kext` ativa com janela Darwin `22.0.0` a `22.99.99` (estado anterior) |
 | Bluetooth | `IntelBluetoothFirmware` + `IntelBTPatcher` ativos; `IntelBluetoothInjector` desativado |
 | Input | Stack PS2 ativa (`VoodooPS2Trackpad` + `VoodooInput` PS2), stack I2C desativada |
 | USB | `USBInjectAll.kext` ativo + `XhciPortLimit=true` (temporário até mapeamento) |
