@@ -24,7 +24,7 @@
 | Ethernet    | Realtek RTL8111/8168/8411    |
 | Wi-Fi       | Intel (AirportItlwm / itlwm) |
 | Bluetooth   | Intel                        |
-| Audio       | Realtek (layout-id 11)       |
+| Audio       | Realtek (layout-id 21)       |
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
@@ -52,7 +52,7 @@ EFI_Vostro13_5471_Ventura/
 * Boot-args:
 
   ```
-  -wegnoegpu alcid=11
+  -wegnoegpu alcid=21
   ```
 * dGPU desativada (WhateverGreen)
 * SecureBootModel: Default
@@ -136,6 +136,7 @@ Antes do primeiro boot:
 
 ## 📝 Observações
 
+* Layout padrão atual de áudio: `21` (prioriza speakers internos)
 * Se não houver áudio, teste:
 
   ```

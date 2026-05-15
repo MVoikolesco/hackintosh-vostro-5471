@@ -162,7 +162,7 @@
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
-				<data>CwAAAA==</data>
+				<data>FQAAAA==</data>
 			</dict>
 			<!-- Ethernet onboard - Intel PCH LAN (slot 00:1f.6) -->
 			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
@@ -274,7 +274,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>Audio - ALC295 layout-id 11</string>
+				<string>Audio - ALC295 layout-id 21 (prioriza speakers internos)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -795,7 +795,7 @@
 			<dict>
 				<!-- boot-args para Kaby Lake-R + dGPU off + ajustes HDMI -->
 				<key>boot-args</key>
-				<string>-wegnoegpu alcid=11 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1</string>
+				<string>-wegnoegpu alcid=21 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1</string>
 				<key>csr-active-config</key>
 				<!-- SIP enabled -->
 				<data>AAAAAA==</data>
