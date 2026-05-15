@@ -56,6 +56,7 @@ EFI_Vostro13_5471_Ventura/
   ```
 * dGPU desativada (WhateverGreen)
 * SecureBootModel: Default
+* Power Management (CPU): `AppleCpuPmCfgLock=True` + `ProvideCurrentCpuInfo=True`
 * AirportItlwm compatível com Ventura (22.x)
 
 ---
@@ -123,6 +124,8 @@ Antes do primeiro boot:
    * UUID
 
 2. Faça **Reset NVRAM** pelo OpenCore
+
+   > Obrigatório após trocar a EFI para aplicar os novos ajustes de energia da CPU.
 
 3. Wi-Fi não funcionando?
 
