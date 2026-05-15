@@ -28,7 +28,7 @@
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
-| Input       | PS/2 (Synaptics / ELAN) |
+| Input       | PS/2 (Synaptics / ELAN)      |
 
 ---
 
