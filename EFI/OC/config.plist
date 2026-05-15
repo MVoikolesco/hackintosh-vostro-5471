@@ -161,8 +161,9 @@
 			<!-- Audio - ALC295 (HDEF em Pci(0x1f,0x3)) -->
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
+				<!-- 21 decimal (0x15) em little-endian/base64 -->
 				<key>layout-id</key>
-				<data>CwAAAA==</data>
+				<data>FQAAAA==</data>
 			</dict>
 			<!-- Ethernet onboard - Intel PCH LAN (slot 00:1f.6) -->
 			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
@@ -274,7 +275,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>Audio - ALC295 layout-id 11</string>
+				<string>Audio - ALC295 layout-id 21 (prioriza speakers internos)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -346,9 +347,9 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
 				<key>Comment</key>
-				<string>PS2 Mouse plugin</string>
+				<string>PS2 Mouse plugin - desativado para priorizar o dispositivo do trackpad no macOS</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Mouse</string>
 				<key>MaxKernel</key>
@@ -382,7 +383,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
 				<key>Comment</key>
-				<string>VoodooGPIO - plugin obrigatorio do VoodooI2C</string>
+				<string>VoodooGPIO - plugin obrigatório do VoodooI2C</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -400,7 +401,7 @@
 				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooI2CServices.kext</string>
 				<key>Comment</key>
-				<string>VoodooI2CServices - plugin obrigatorio do VoodooI2C</string>
+				<string>VoodooI2CServices - plugin obrigatório do VoodooI2C</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -597,13 +598,13 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
-			<false/>
+			<true/>
 			<key>AppleXcpmCfgLock</key>
 			<true/>
 			<key>AppleXcpmExtraMsrs</key>
-			<false/>
+			<true/>
 			<key>AppleXcpmForceBoost</key>
-			<false/>
+			<true/>
 			<key>CustomPciSerialDevice</key>
 			<false/>
 			<key>CustomSMBIOSGuid</key>
@@ -635,7 +636,7 @@
 			<key>PowerTimeoutKernelPanic</key>
 			<true/>
 			<key>ProvideCurrentCpuInfo</key>
-			<false/>
+			<true/>
 			<key>SetApfsTrimTimeout</key>
 			<integer>-1</integer>
 			<key>ThirdPartyDrives</key>
@@ -795,7 +796,7 @@
 			<dict>
 				<!-- boot-args para Kaby Lake-R + dGPU off + ajustes HDMI -->
 				<key>boot-args</key>
-				<string>-wegnoegpu alcid=11 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1</string>
+				<string>-wegnoegpu alcid=21 -igfxmpc -igfxhdmidivs igfxonln=1 igfxfcms=1</string>
 				<key>csr-active-config</key>
 				<!-- SIP enabled -->
 				<data>AAAAAA==</data>

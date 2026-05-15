@@ -14,9 +14,10 @@ Esta pasta foi preparada para:
 ## Ajustes aplicados
 - SMBIOS para MacBookPro15,2
 - iGPU ajustada para UHD 620 (ig-platform-id 0x59160000)
-- boot-args: `-wegnoegpu alcid=11`
+- boot-args: `-wegnoegpu alcid=21`
 - Radeon dGPU desativada via boot-arg (WhateverGreen)
 - SecureBootModel em Default
+- Power Management de CPU reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo`
 - AirportItlwm limitado ao kernel do Ventura (22.x)
 - Kexts essenciais habilitadas:
   - Lilu
@@ -40,10 +41,16 @@ Esta pasta foi preparada para:
 - Fast Boot: Disabled
 
 ## Muito importante antes de usar
-1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta maquina.
-2. Se o Wi-Fi nao subir no Ventura, substituir AirportItlwm.kext por build compativel com Ventura (ou usar itlwm + HeliPort).
+1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta máquina.
+2. Se o Wi-Fi não subir no Ventura, substituir AirportItlwm.kext por build compatível com Ventura (ou usar itlwm + HeliPort).
 3. Fazer Reset NVRAM no primeiro boot pelo OpenCore.
+   - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU e do input.
 
-## Observacoes
-- O codec de audio pode variar. Se nao houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
-- USBInjectAll esta temporario. O ideal e mapear USB depois que o sistema estiver estavel.
+## Observações
+- Layout padrão atual de áudio: `21` (prioriza speakers internos).
+- O codec de áudio pode variar. Se não houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
+- USBInjectAll está temporário. O ideal é mapear USB depois que o sistema estiver estável.
+- Trackpad ajustado para stack PS2 estável (`VoodooPS2Trackpad` + `VoodooInput` do PS2).
+- `VoodooPS2Mouse` desativado para priorizar a identificação de trackpad nas Preferências do Sistema.
+- Stack I2C (`VoodooI2C`/`VoodooI2CELAN`) desativada temporariamente para evitar perda de resposta.
+- SSDTs atuais (EC/PLUG/PNLF/SBUS-MCHC/AWAC-DISABLE) foram revisados e mantidos ativos.
