@@ -17,7 +17,7 @@ Esta pasta foi preparada para:
 - boot-args: `-wegnoegpu alcid=11`
 - Radeon dGPU desativada via boot-arg (WhateverGreen)
 - SecureBootModel em Default
-- Power Management de CPU ajustado (`AppleCpuPmCfgLock=True`, `ProvideCurrentCpuInfo=True`, `AppleXcpmExtraMsrs=True` e `AppleXcpmForceBoost=True`)
+- Power Management de CPU ajustado (`AppleCpuPmCfgLock=True`, `AppleXcpmCfgLock=True`, `AppleXcpmExtraMsrs=True`, `AppleXcpmForceBoost=True` e `ProvideCurrentCpuInfo=True`)
 - AirportItlwm limitado ao kernel do Ventura (22.x)
 - Kexts essenciais habilitadas:
   - Lilu
