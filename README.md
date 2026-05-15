@@ -24,7 +24,7 @@
 | Ethernet    | Realtek RTL8111/8168/8411    |
 | Wi-Fi       | Intel (AirportItlwm / itlwm) |
 | Bluetooth   | Intel                        |
-| Audio       | Realtek ALC295 (layout-id 21)|
+| Audio       | Realtek ALC295 (layout-id 21) |
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
