@@ -277,7 +277,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>Audio - ALC295 layout-id 11 (perfil padrao)</string>
+				<string>Audio - ALC295 layout-id 11 (perfil padrão)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
