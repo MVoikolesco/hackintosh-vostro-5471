@@ -491,15 +491,15 @@
 				<key>BundlePath</key>
 				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
-				<string>Intel Wi-Fi - Ventura (Darwin 22)</string>
+				<string>Intel Wi-Fi - Sonoma/Sequoia baseline (Darwin 23-24)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportItlwm</string>
 				<key>MaxKernel</key>
-				<string>22.99.99</string>
+				<string>24.99.99</string>
 				<key>MinKernel</key>
-				<string>22.0.0</string>
+				<string>23.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
