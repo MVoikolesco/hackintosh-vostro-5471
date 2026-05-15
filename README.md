@@ -1,4 +1,4 @@
-# 💻 Dell Vostro 13 5471 - Hackintosh (macOS Ventura)
+# 💻 Dell Vostro 13 5471 - Hackintosh (macOS Ventura + trilha Sequoia)
 
 <img width="313" height="530" alt="WhatsApp Image 2026-05-03 at 22 03 06" src="https://github.com/user-attachments/assets/4432a9a3-8f3c-4100-bc80-f01ee0516dd3" />
 
@@ -6,9 +6,19 @@
 
 ## 📌 EFI Details
 
-* **macOS**: Ventura (13.x)
+* **macOS**: Ventura (13.x) estável + migração para Sequoia em andamento
 * **OpenCore**: 1.0.0
 * **Release date**: 03/05/2026
+
+---
+
+## 🛣️ Trilha Sequoia
+
+O planejamento e o status da migração para Sequoia estão em:
+
+* [`README-SEQUOIA-MIGRATION.md`](README-SEQUOIA-MIGRATION.md)
+
+> Este arquivo mantém a baseline congelada e o checklist de validação por bloco (boot, Wi‑Fi/BT, áudio, vídeo, sleep/wake, USB e iServices).
 
 ---
 
