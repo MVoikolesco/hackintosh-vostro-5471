@@ -67,7 +67,7 @@ EFI_Vostro13_5471_Ventura/
 * dGPU desativada (WhateverGreen)
 * SecureBootModel: Default
 * Power Management (CPU) reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo` (melhora estabilidade de frequência/estados de energia)
-* AirportItlwm compatível com Ventura (22.x)
+* AirportItlwm atualizado para base Sonoma 14.4 (faixa Darwin 23.x/24.x para Sonoma/Sequoia)
 
 ---
 
@@ -84,6 +84,7 @@ EFI_Vostro13_5471_Ventura/
 * IntelBluetoothFirmware
 * IntelBTPatcher
 * USBInjectAll *(temporário)*
+* AirportItlwm_Ventura_backup *(backup local da kext anterior)*
 
 ---
 

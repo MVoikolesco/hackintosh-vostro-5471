@@ -34,6 +34,17 @@ Referência: `EFI/OC/config.plist` da branch `sequoia-migration`.
 
 ---
 
+## 2.1) Mudanças efetivas já aplicadas na branch
+
+- `EFI/OC/Kexts/AirportItlwm.kext` substituída para build `v2.3.0 stable Sonoma14.4`.
+- Backup da kext anterior salvo em `EFI/OC/Kexts/AirportItlwm_Ventura_backup.kext`.
+- `EFI/OC/config.plist` atualizado no bloco `Kernel -> Add -> AirportItlwm.kext`:
+  - `Comment`: `Intel Wi-Fi - Sonoma/Sequoia baseline (Darwin 23-24)`
+  - `MinKernel`: `23.0.0`
+  - `MaxKernel`: `24.99.99`
+
+---
+
 ## 3) Status do plano (implementação na branch)
 
 - [x] Congelar baseline funcional atual para comparação.
