@@ -17,7 +17,7 @@ Esta pasta foi preparada para:
 - boot-args: `-wegnoegpu alcid=11`
 - Radeon dGPU desativada via boot-arg (WhateverGreen)
 - SecureBootModel em Default
-- Power Management de CPU ajustado (quirks `AppleCpuPmCfgLock`, `AppleXcpmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo` habilitados)
+- Power Management de CPU ajustado (quirks `AppleCpuPmCfgLock`, `AppleXcpmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo` ativados)
 - AirportItlwm limitado ao kernel do Ventura (22.x)
 - Kexts essenciais habilitadas:
   - Lilu
@@ -44,7 +44,7 @@ Esta pasta foi preparada para:
 1. Gerar SMBIOS novo (Serial, MLB e UUID) para esta maquina.
 2. Se o Wi-Fi nao subir no Ventura, substituir AirportItlwm.kext por build compativel com Ventura (ou usar itlwm + HeliPort).
 3. Fazer Reset NVRAM no primeiro boot pelo OpenCore.
-   - Obrigatorio para aplicar os novos ajustes de gerenciamento de energia da CPU.
+   - Obrigatório para aplicar os novos ajustes de gerenciamento de energia da CPU.
 
 ## Observacoes
 - O codec de audio pode variar. Se nao houver som, testar outros layout-id (ex: 3, 11, 13, 21, 28).
