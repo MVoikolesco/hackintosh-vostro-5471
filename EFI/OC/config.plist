@@ -134,9 +134,9 @@
 				<key>device-id</key>
 				<!-- 0x5916 (UHD 620) em little-endian -->
 				<data>FlkAAA==</data>
-				<key>enable-backlight-registers-fix</key>
-				<data>AQAAAA==</data>
 				<key>AAPL00,backlight-control</key>
+				<data>AQAAAA==</data>
+				<key>enable-backlight-registers-fix</key>
 				<data>AQAAAA==</data>
 				<!-- DVMT Pre-Allocated fix para BIOS Dell com memoria de iGPU baixa -->
 				<key>framebuffer-patch-enable</key>
