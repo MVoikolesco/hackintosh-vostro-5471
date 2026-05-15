@@ -346,7 +346,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
 				<key>Comment</key>
-				<string>PS2 Mouse plugin - desativado para priorizar o dispositivo trackpad no macOS</string>
+				<string>PS2 Mouse plugin - desativado para priorizar o dispositivo do trackpad no macOS</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
