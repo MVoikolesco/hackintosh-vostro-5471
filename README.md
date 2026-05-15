@@ -24,7 +24,7 @@
 | Ethernet    | Realtek RTL8111/8168/8411    |
 | Wi-Fi       | Intel (AirportItlwm / itlwm) |
 | Bluetooth   | Intel                        |
-| Audio       | Realtek ALC295 (layout-id 11) |
+| Audio       | Realtek ALC295 (layout-id 21)|
 | Display     | 13.3" 60Hz                   |
 | Webcam      | USB                          |
 | Card Reader | USB                          |
@@ -52,14 +52,11 @@ EFI_Vostro13_5471_Ventura/
 * Boot-args:
 
   ```
-  -wegnoegpu alcid=11
+  -wegnoegpu alcid=21
   ```
 * dGPU desativada (WhateverGreen)
 * SecureBootModel: Default
-* Power Management (CPU) reforçado com:
-  * `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost`
-  * `ProvideCurrentCpuInfo` (melhora estabilidade de frequência/estados de energia)
-* Ajuste adicional de backlight (`AAPL00,backlight-control=1`) para melhorar controle de brilho
+* Power Management (CPU) reforçado com `AppleCpuPmCfgLock`, `AppleXcpmExtraMsrs`, `AppleXcpmForceBoost` e `ProvideCurrentCpuInfo` (melhora estabilidade de frequência/estados de energia)
 * AirportItlwm compatível com Ventura (22.x)
 
 ---
@@ -139,7 +136,7 @@ Antes do primeiro boot:
 
 ## 📝 Observações
 
-* Layout padrão atual de áudio: `11` (ALC295)
+* Layout padrão atual de áudio: `21` (prioriza speakers internos)
 * Se não houver áudio, teste:
 
   ```
