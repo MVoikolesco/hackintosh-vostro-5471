@@ -161,6 +161,7 @@
 			<!-- Audio - ALC295 (HDEF em Pci(0x1f,0x3)) -->
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
+				<!-- 21 decimal (0x15) em little-endian/base64 -->
 				<key>layout-id</key>
 				<data>FQAAAA==</data>
 			</dict>
